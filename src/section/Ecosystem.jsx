@@ -1,6 +1,7 @@
 import EcosystemCard from "components/EcosystemCard";
 import Heading from "components/Heading";
-import { useState } from "react";
+import useIntersectionObserver from "hooks/useIntersectionObserver";
+import { useEffect, useRef, useState } from "react";
 
 const accordion_data = [
   {
@@ -27,6 +28,17 @@ const accordion_data = [
 
 function Ecosystem() {
   const [activeMenu, setActiveMenu] = useState(null);
+  const videoRef = useRef();
+  const isScrolled = useIntersectionObserver(videoRef);
+
+  useEffect(() => {
+    if (isScrolled) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
+  }, [isScrolled]);
 
   return (
     <section>
@@ -35,12 +47,15 @@ function Ecosystem() {
 
         <div className="grid lg:grid-cols-2 gap-14">
           <div className="relative z-10 flex items-center justify-center py-10">
-            <div className="max-w-[200px] lg:max-w-[268px] w-full relative z-10">
+            <div className="max-w-[200px] lg:max-w-[268px] w-full relative z-10 overflow-hidden rounded-[30px] lg:rounded-[38px]">
               <video
+                ref={videoRef}
                 src="images/economics-video.mp4"
                 loop={true}
-                autoPlay={true}
-                className="w-full"
+                autoPlay
+                // controls={true}
+                muted
+                className="w-full scale-x-[1.12] scale-y-[1.03] h-full"
               ></video>
             </div>
 
