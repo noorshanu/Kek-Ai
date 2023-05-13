@@ -1,4 +1,5 @@
 import Button from "components/Button";
+import SocialIcons from "components/SocialIcons";
 
 function Hero() {
   return (
@@ -6,17 +7,17 @@ function Hero() {
       <div className="container-wrapper z-20 relative">
         <img
           src="images/props/rock.png"
-          className="absolute top-[40%] sm:top-[5%] right-[4%] w-[2.6rem] sm:w-[4rem] -z-10 pointer-events-none"
+          className="float absolute top-[40%] sm:top-[5%] right-[4%] w-[2.6rem] sm:w-[4rem] -z-10 pointer-events-none"
           alt=""
         />
         <img
           src="images/props/fire-2.png"
-          className="absolute opacity-30 sm:opacity-100 top-[5%] left-[4%] w-[4rem] -z-10 pointer-events-none"
+          className="float absolute opacity-30 sm:opacity-100 top-[5%] left-[4%] w-[4rem] -z-10 pointer-events-none"
           alt=""
         />
         <img
           src="images/props/fire-1.png"
-          className="absolute top-[-22%] right-[24%] w-[2rem] -z-10 pointer-events-none"
+          className="float absolute top-[-22%] right-[24%] w-[2rem] -z-10 pointer-events-none"
           alt=""
         />
 
@@ -33,9 +34,13 @@ function Hero() {
           <Button>Join Community</Button>
           <Button variant={1}>BUY NOW</Button>
         </div>
+
+        <div className="flex items-center justify-center mt-8 sm:mt-10 space-x-[.8em] text-[140%] xl:text-[160%]">
+          <SocialIcons />
+        </div>
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 mt-4 lg:mt-0">
         <div className="absolute top-[0] sm:top-[-4rem] lg:top-[-14rem] left-1/2 -translate-x-1/2 w-full -z-10 max-w-[1280px]">
           <img
             src="images/hero-bg.png"
@@ -49,12 +54,14 @@ function Hero() {
         <div className="container-wrapper relative z-10">
           <img
             src="images/props/rock.png"
-            className="absolute top-[5%] right-[14%] w-[3rem] rotate-[60deg] -z-10 pointer-events-none"
+            style={{ "--speed": "3s" }}
+            className="float absolute top-[5%] right-[14%] w-[3rem] rotate-[60deg] -z-10 pointer-events-none"
             alt=""
           />
           <img
+            style={{ "--lifting": "-30px", "--speed": "5s" }}
             src="images/props/rock.png"
-            className="absolute top-[15%] left-[4%] w-[3rem] rotate-[-60deg] -z-10 pointer-events-none"
+            className="float absolute top-[15%] left-[4%] w-[3rem] rotate-[-60deg] -z-10 pointer-events-none"
             alt=""
           />
           <img

@@ -118,3 +118,22 @@
     opacity: 0;
   }
 }
+
+.float {
+  --speed: 6s;
+  --lifting: -10px;
+
+  animation: float var(--speed) ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(var(--lifting));
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}

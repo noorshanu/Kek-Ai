@@ -1,6 +1,6 @@
-function Logo() {
+function Logo({ className }) {
   return (
-    <div className="flex items-center space-x-[0.5em]">
+    <div className={`flex items-center space-x-[0.5em] ${className}`}>
       <img src="images/logo.png" className="w-[2.625em]" alt="" />
       <h1 className="text-[1em] font-bold">KeK AI</h1>
     </div>

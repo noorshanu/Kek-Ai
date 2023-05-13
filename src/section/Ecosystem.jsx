@@ -35,12 +35,13 @@ function Ecosystem() {
 
         <div className="grid lg:grid-cols-2 gap-14">
           <div className="relative z-10 flex items-center justify-center py-10">
-            <div className="max-w-[200px] lg:max-w-[268px] w-full relative">
-              <img
-                src="images/ecosystem-mobile.png"
+            <div className="max-w-[200px] lg:max-w-[268px] w-full relative z-10">
+              <video
+                src="images/economics-video.mp4"
+                loop={true}
+                autoPlay={true}
                 className="w-full"
-                alt=""
-              />
+              ></video>
             </div>
 
             <img

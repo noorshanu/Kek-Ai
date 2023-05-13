@@ -13,11 +13,11 @@ function Footer() {
 
         <div className="container-wrapper">
           <div className="flex flex-col lg:flex-row space-y-6 lg:space-y-0 items-center justify-between">
-            <div className="text-[100%]">
+            <div className="text-[100%] lg:text-[130%]">
               <Logo />
             </div>
 
-            <div className="flex items-center space-x-[.8em] text-[144%]">
+            <div className="flex items-center space-x-[.8em] text-[140%] lg:text-[160%]">
               <SocialIcons />
             </div>
           </div>

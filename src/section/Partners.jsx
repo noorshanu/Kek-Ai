@@ -18,12 +18,13 @@ function Partners() {
       <div className="container-wrapper relative">
         <img
           src="images/props/rock.png"
-          className="absolute left-0 top-[-6rem] w-[2rem] rotate-[-40deg]"
+          style={{ "--speed": "2s" }}
+          className="float absolute left-0 top-[-6rem] w-[2rem] rotate-[-40deg]"
           alt=""
         />
         <img
           src="images/props/rock.png"
-          className="absolute left-0 top-[-2rem] w-[4rem] rotate-[40deg]"
+          className="float absolute left-0 top-[-2rem] w-[4rem] rotate-[40deg]"
           alt=""
         />
 

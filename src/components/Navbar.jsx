@@ -23,7 +23,7 @@ function Navbar() {
     <nav>
       <div className="container-wrapper">
         <div className="py-5 lg:py-8 flex items-center justify-between relative">
-          <Logo />
+          <Logo className="text-[100%] lg:text-[110%]" />
 
           {!isAbove1024px && (
             <button className="flex lg:hidden" onClick={toggleSidebar}>
