@@ -15,8 +15,19 @@ const logos = [
 function Partners() {
   return (
     <section>
-      <div className="container-wrapper">
-        <div className="mb-16">
+      <div className="container-wrapper relative">
+        <img
+          src="images/props/rock.png"
+          className="absolute left-0 top-[-6rem] w-[2rem] rotate-[-40deg]"
+          alt=""
+        />
+        <img
+          src="images/props/rock.png"
+          className="absolute left-0 top-[-2rem] w-[4rem] rotate-[40deg]"
+          alt=""
+        />
+
+        <div className="mb-8 lg:mb-16">
           <Heading>PARTNERS</Heading>
         </div>
 

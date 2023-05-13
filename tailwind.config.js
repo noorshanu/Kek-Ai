@@ -20,6 +20,9 @@ export default {
       backgroundImage: {
         "purple-gradient":
           "linear-gradient(141.49deg, rgba(255, 255, 255, 0) 8.21%, rgba(255, 255, 255, 0.09) 47.21%, rgba(255, 255, 255, 0) 88.72%)",
+
+        "ecosystem-card":
+          "linear-gradient(107.46deg, rgba(255, 255, 255, 0) 6.94%, rgba(255, 255, 255, 0.08) 39.88%, rgba(255, 255, 255, 0) 74.95%)",
       },
     },
   },

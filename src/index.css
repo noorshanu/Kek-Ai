@@ -42,7 +42,7 @@
 
   html,
   body {
-    @apply bg-bg text-white;
+    @apply bg-bg text-white overflow-x-hidden;
   }
 
   .container-wrapper {
@@ -61,4 +61,60 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+.black-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.black-screen.show {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+/* ANIMATED black-screen */
+
+.black-screen-animated {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.black-screen-animated.show {
+  animation-name: fade-in;
+}
+
+.black-screen-animated.hide {
+  animation-name: fade-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
