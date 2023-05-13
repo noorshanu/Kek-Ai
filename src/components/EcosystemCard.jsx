@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const EcosystemCard = ({ img, children, title, active, setActiveMenu }) => {
-  const [isAccordionOpen, setIsAccordionOpen] = useState(open ? open : false);
+  const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const accordionMenuRef = useRef(null);
 
   const toggleAccordion = (val) => {
@@ -14,25 +14,26 @@ const EcosystemCard = ({ img, children, title, active, setActiveMenu }) => {
 
   const accordionHeight = { height: getHeight() };
 
-  useEffect(() => {
-    if (active) {
-      toggleAccordion(true);
-    } else {
-      toggleAccordion(false);
-    }
-  }, [active]);
+  // useEffect(() => {
+  //   if (active) {
+  //     toggleAccordion(true);
+  //   } else {
+  //     toggleAccordion(false);
+  //   }
+  // }, [active]);
 
   return (
     <div
       onClick={() => {
-        if (active) {
-          setActiveMenu(null);
-          return;
-        }
+        toggleAccordion();
+        // if (active) {
+        //   setActiveMenu(null);
+        //   return;
+        // }
 
-        if (!active) {
-          setActiveMenu(title);
-        }
+        // if (!active) {
+        //   setActiveMenu(title);
+        // }
       }}
       className={`border-2 border-[rgba(170,227,62,.3)] py-4 px-4 xl:py-7 xl:px-7 rounded-2xl flex cursor-pointer bg-ecosystem-card lg:bg-none relative`}
     >
