@@ -51,11 +51,12 @@ function Ecosystem() {
               <video
                 ref={videoRef}
                 src="images/economics-video.mp4"
-                loop={true}
-                autoPlay
-                // controls={true}
-                muted
                 className="w-full scale-x-[1.12] scale-y-[1.03] h-full"
+                autoPlay={true}
+                loop={true}
+                controls={false}
+                playsInline
+                muted
               ></video>
             </div>
 
