@@ -50,13 +50,13 @@ function Ecosystem() {
             <div className="max-w-[200px] lg:max-w-[268px] w-full relative z-10 overflow-hidden rounded-[30px] lg:rounded-[38px]">
               <video
                 ref={videoRef}
-                src="images/economics-video.mp4"
-                className="w-full scale-x-[1.12] scale-y-[1.03] h-full"
+                src="images/economics-video.webm"
+                className="w-full"
                 autoPlay={true}
                 loop={true}
                 controls={false}
-                playsInline
-                muted
+                playsInline={true}
+                muted={true}
               ></video>
             </div>
 
