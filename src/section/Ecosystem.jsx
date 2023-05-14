@@ -57,12 +57,13 @@ function Ecosystem() {
                 ref={videoRef}
                 src="images/economics-video.webm"
                 className="w-full"
+                playsInline
+                controls={false}
                 // autoPlay={true}
                 // loop={true}
                 // controls={false}
                 // playsInline={true}
                 // muted={true}
-                controls={true}
               ></video>
             </div>
 
