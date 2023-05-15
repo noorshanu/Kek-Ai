@@ -8,7 +8,7 @@ import Tokenomics from "section/Tokenomics";
 
 function App() {
   return (
-    <div>
+    <div id="home">
       <div className="mb-4 sm:mb-6 lg:mb-10">
         <Navbar />
       </div>

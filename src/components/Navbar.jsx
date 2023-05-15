@@ -34,9 +34,12 @@ function Navbar() {
 
           {isAbove1024px && (
             <div className="hidden lg:flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-10 lg:absolute top-1/2 lg:-translate-y-1/2 left-1/2 lg:-translate-x-1/2">
-              <a href="/" className="text-white font-medium text-sm">
+              <ScrollLink
+                to="home"
+                className="text-white font-medium text-sm cursor-pointer"
+              >
                 HOME
-              </a>
+              </ScrollLink>
               <ScrollLink
                 to="about-section"
                 offset={-50}
@@ -84,9 +87,13 @@ function Navbar() {
             {/*  */}
             {!isAbove1024px && (
               <div className="lg:hidden flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-10 lg:absolute top-1/2 lg:-translate-y-1/2 left-1/2 lg:-translate-x-1/2">
-                <a href="/" className="text-white font-medium text-sm">
+                <ScrollLink
+                  to="home"
+                  className="text-white font-medium text-sm cursor-pointer"
+                  onClick={toggleSidebar}
+                >
                   HOME
-                </a>
+                </ScrollLink>
                 <ScrollLink
                   to="about-section"
                   offset={-50}
