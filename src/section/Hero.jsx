@@ -16,26 +16,26 @@ function Hero() {
   //   }
   // }, [isScrolled]);
 
-  // useEffect(() => {
-  //   if (videoRef?.current) {
-  //     const isPlaying =
-  //       videoRef.current.currentTime > 0 &&
-  //       !videoRef.current.paused &&
-  //       !videoRef.current.ended &&
-  //       videoRef.current.readyState > videoRef.current.HAVE_CURRENT_DATA;
+  useEffect(() => {
+    if (videoRef?.current) {
+      const isPlaying =
+        videoRef.current.currentTime > 0 &&
+        !videoRef.current.paused &&
+        !videoRef.current.ended &&
+        videoRef.current.readyState > videoRef.current.HAVE_CURRENT_DATA;
 
-  //     if (isScrolled) {
-  //       // videoRef.current.currentTime = 0;
-  //       if (!isPlaying) {
-  //         videoRef.current.play();
-  //       }
-  //     } else {
-  //       if (isPlaying) {
-  //         videoRef.current.pause();
-  //       }
-  //     }
-  //   }
-  // }, [isScrolled]);
+      if (isScrolled) {
+        // videoRef.current.currentTime = 0;
+        if (!isPlaying) {
+          videoRef.current.play();
+        }
+      } else {
+        if (isPlaying) {
+          videoRef.current.pause();
+        }
+      }
+    }
+  }, [isScrolled]);
 
   return (
     <section>
@@ -135,12 +135,12 @@ function Hero() {
             <div className="w-full rounded-xl border-1 overflow-hidden mb-6 lg:mb-12">
               <video
                 ref={videoRef}
-                src="images/video.MP4"
+                src="images/video.mp4"
                 className="w-full"
-                // playsInline
+                playsInline
                 controls={true}
-                // autoPlay={true}
-                // muted="muted"
+                autoPlay={true}
+                muted="muted"
                 // autoPlay={true}
                 // loop={true}
                 // controls={false}
