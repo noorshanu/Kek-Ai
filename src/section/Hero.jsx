@@ -1,7 +1,21 @@
 import Button from "components/Button";
 import SocialIcons from "components/SocialIcons";
+import useIntersectionObserver from "hooks/useIntersectionObserver";
+import { useEffect, useRef } from "react";
 
 function Hero() {
+  const videoRef = useRef();
+  const isScrolled = useIntersectionObserver(videoRef, { threshold: 0.5 });
+
+  useEffect(() => {
+    if (isScrolled) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
+  }, [isScrolled]);
+
   return (
     <section>
       <div className="container-wrapper z-20 relative">
@@ -98,11 +112,18 @@ function Hero() {
 
           <div className="max-w-[931px] w-full mx-auto">
             <div className="w-full rounded-xl border-1 overflow-hidden mb-6 lg:mb-12">
-              <img
-                src="images/hero-video.png"
-                className="w-full scale-[1.1]"
-                alt=""
-              />
+              <video
+                ref={videoRef}
+                src="images/video.MP4"
+                className="w-full"
+                playsInline
+                controls={true}
+                // autoPlay={true}
+                // loop={true}
+                // controls={false}
+                // playsInline={true}
+                // muted={true}
+              ></video>
             </div>
 
             <p className="text-center">

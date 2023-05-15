@@ -30,11 +30,6 @@ function Ecosystem() {
   const [activeMenu, setActiveMenu] = useState(null);
   const videoRef = useRef();
   const isScrolled = useIntersectionObserver(videoRef);
-  // const [videoLoaded, setVideoLoaded] = useState(false);
-
-  // const handleVideoLoad = () => {
-  //   setVideoLoaded(true);
-  // };
 
   useEffect(() => {
     if (isScrolled) {
