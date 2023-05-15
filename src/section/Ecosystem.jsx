@@ -41,7 +41,7 @@ function Ecosystem() {
   }, [isScrolled]);
 
   return (
-    <section>
+    <section id="ecosystem-section">
       <div className="container-wrapper">
         <Heading className="mb-8 lg:mb-16">OUR ECOSYSTEM</Heading>
 

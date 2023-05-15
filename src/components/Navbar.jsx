@@ -5,6 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 import useDelayUnmount from "hooks/useDelayUnmount";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
+import { Link as ScrollLink } from "react-scroll";
 
 function Navbar() {
   const isAbove1024px = useMediaQuery("(min-width : 1024px)");
@@ -36,15 +37,27 @@ function Navbar() {
               <a href="/" className="text-white font-medium text-sm">
                 HOME
               </a>
-              <a href="/" className="text-white font-medium text-sm">
+              <ScrollLink
+                to="about-section"
+                offset={-50}
+                className="text-white font-medium text-sm cursor-pointer"
+              >
                 ABOUT
-              </a>
-              <a href="/" className="text-white font-medium text-sm">
+              </ScrollLink>
+              <ScrollLink
+                to="ecosystem-section"
+                offset={-50}
+                className="text-white font-medium text-sm cursor-pointer"
+              >
                 ECOSYSTEM
-              </a>
-              <a href="/" className="text-white font-medium text-sm">
+              </ScrollLink>
+              <ScrollLink
+                to="roadmap-section"
+                offset={-50}
+                className="text-white font-medium text-sm cursor-pointer"
+              >
                 ROADMAP
-              </a>
+              </ScrollLink>
             </div>
           )}
 
@@ -74,15 +87,30 @@ function Navbar() {
                 <a href="/" className="text-white font-medium text-sm">
                   HOME
                 </a>
-                <a href="/" className="text-white font-medium text-sm">
+                <ScrollLink
+                  to="about-section"
+                  offset={-50}
+                  className="text-white font-medium text-sm cursor-pointer"
+                  onClick={toggleSidebar}
+                >
                   ABOUT
-                </a>
-                <a href="/" className="text-white font-medium text-sm">
+                </ScrollLink>
+                <ScrollLink
+                  to="ecosystem-section"
+                  offset={-50}
+                  className="text-white font-medium text-sm cursor-pointer"
+                  onClick={toggleSidebar}
+                >
                   ECOSYSTEM
-                </a>
-                <a href="/" className="text-white font-medium text-sm">
+                </ScrollLink>
+                <ScrollLink
+                  to="roadmap-section"
+                  offset={-50}
+                  className="text-white font-medium text-sm cursor-pointer"
+                  onClick={toggleSidebar}
+                >
                   ROADMAP
-                </a>
+                </ScrollLink>
               </div>
             )}
 

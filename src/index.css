@@ -37,7 +37,7 @@
 
 @layer base {
   * {
-    @apply font-outfit;
+    @apply font-outfit scroll-smooth;
   }
 
   html,

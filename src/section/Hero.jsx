@@ -131,7 +131,7 @@ function Hero() {
 
           <div className="max-w-[289px] lg:max-w-[631px] w-full bg-white h-[1px] mx-auto mb-8"></div>
 
-          <div className="max-w-[931px] w-full mx-auto">
+          <div className="max-w-[931px] w-full mx-auto" id="about-section">
             <div className="w-full rounded-xl border-1 overflow-hidden mb-6 lg:mb-12">
               <video
                 ref={videoRef}
