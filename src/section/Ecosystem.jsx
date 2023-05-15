@@ -54,11 +54,11 @@ function Ecosystem() {
                 className="w-full"
                 playsInline
                 controls={false}
+                muted={true}
                 // autoPlay={true}
                 // loop={true}
                 // controls={false}
                 // playsInline={true}
-                // muted={true}
               ></video>
             </div>
 

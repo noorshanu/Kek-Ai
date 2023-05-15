@@ -7,9 +7,11 @@ function Hero() {
   const videoRef = useRef();
   const isScrolled = useIntersectionObserver(videoRef, { threshold: 0.5 });
 
+  console.log(isScrolled);
+
   useEffect(() => {
     if (isScrolled) {
-      videoRef.current.currentTime = 0;
+      // videoRef.current.currentTime = 0;
       videoRef.current.play();
     } else {
       videoRef.current.pause();
@@ -114,10 +116,12 @@ function Hero() {
             <div className="w-full rounded-xl border-1 overflow-hidden mb-6 lg:mb-12">
               <video
                 ref={videoRef}
-                src="images/video.MP4"
+                src="images/video-compressed.mp4"
                 className="w-full"
                 playsInline
                 controls={true}
+                autoPlay={true}
+                muted="muted"
                 // autoPlay={true}
                 // loop={true}
                 // controls={false}
