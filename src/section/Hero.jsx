@@ -7,14 +7,24 @@ function Hero() {
   const videoRef = useRef();
   const isScrolled = useIntersectionObserver(videoRef, { threshold: 0.5 });
 
-  console.log(isScrolled);
-
   useEffect(() => {
-    if (isScrolled) {
-      // videoRef.current.currentTime = 0;
-      videoRef.current.play();
-    } else {
-      videoRef.current.pause();
+    if (videoRef?.current) {
+      const isPlaying =
+        videoRef.current.currentTime > 0 &&
+        !videoRef.current.paused &&
+        !videoRef.current.ended &&
+        videoRef.current.readyState > videoRef.current.HAVE_CURRENT_DATA;
+
+      if (isScrolled) {
+        // videoRef.current.currentTime = 0;
+        if (!isPlaying) {
+          videoRef.current.play();
+        }
+      } else {
+        if (isPlaying) {
+          videoRef.current.pause();
+        }
+      }
     }
   }, [isScrolled]);
 
