@@ -7,35 +7,35 @@ function Hero() {
   const videoRef = useRef();
   const isScrolled = useIntersectionObserver(videoRef, { threshold: 0.5 });
 
-  useEffect(() => {
-    if (isScrolled) {
-      // videoRef.current.currentTime = 0;
-      videoRef.current.play();
-    } else {
-      videoRef.current.pause();
-    }
-  }, [isScrolled]);
-
   // useEffect(() => {
-  //   if (videoRef?.current) {
-  //     const isPlaying =
-  //       videoRef.current.currentTime > 0 &&
-  //       !videoRef.current.paused &&
-  //       !videoRef.current.ended &&
-  //       videoRef.current.readyState > videoRef.current.HAVE_CURRENT_DATA;
-
-  //     if (isScrolled) {
-  //       // videoRef.current.currentTime = 0;
-  //       if (!isPlaying) {
-  //         videoRef.current.play();
-  //       }
-  //     } else {
-  //       if (isPlaying) {
-  //         videoRef.current.pause();
-  //       }
-  //     }
+  //   if (isScrolled) {
+  //     // videoRef.current.currentTime = 0;
+  //     videoRef.current.play();
+  //   } else {
+  //     videoRef.current.pause();
   //   }
   // }, [isScrolled]);
+
+  useEffect(() => {
+    if (videoRef?.current) {
+      const isPlaying =
+        videoRef.current.currentTime > 0 &&
+        !videoRef.current.paused &&
+        !videoRef.current.ended &&
+        videoRef.current.readyState > videoRef.current.HAVE_CURRENT_DATA;
+
+      if (isScrolled) {
+        // videoRef.current.currentTime = 0;
+        if (!isPlaying) {
+          videoRef.current.play();
+        }
+      } else {
+        if (isPlaying) {
+          videoRef.current.pause();
+        }
+      }
+    }
+  }, [isScrolled]);
 
   return (
     <section>
@@ -135,7 +135,7 @@ function Hero() {
             <div className="w-full rounded-xl border-1 overflow-hidden mb-6 lg:mb-12">
               <video
                 ref={videoRef}
-                src="images/video-compressed.mp4"
+                src="images/video.MP4"
                 className="w-full"
                 playsInline
                 controls={true}
