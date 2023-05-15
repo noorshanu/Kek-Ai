@@ -64,7 +64,7 @@ function Roadmap() {
           <>
             <img
               src="images/roadmap-desktop.svg"
-              className="w-full pointer-events-none select-none"
+              className="w-full pointer-events-none select-none hidden lg:block"
               alt=""
             />
 
@@ -134,7 +134,7 @@ function Roadmap() {
           <>
             <img
               src="images/roadmap-mobile.svg"
-              className="w-full max-w-[364px] mx-auto pointer-events-none select-none"
+              className="w-full max-w-[364px] mx-auto pointer-events-none select-none block lg:hidden"
               alt=""
             />
 
