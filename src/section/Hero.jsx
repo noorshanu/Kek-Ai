@@ -138,7 +138,7 @@ function Hero() {
                 src="images/video.MP4"
                 className="w-full"
                 playsInline
-                controls={true}
+                controls
                 autoPlay={true}
                 muted="muted"
                 // autoPlay={true}
