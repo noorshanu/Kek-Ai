@@ -14,7 +14,9 @@ function App() {
   return (
     <div
       className={`${
-        loading ? "h-screen overflow-y-hidden" : "h-auto overflow-y-auto"
+        loading
+          ? "h-screen overflow-y-hidden"
+          : "h-auto overflow-y-auto overflow-x-hidden"
       }`}
     >
       {loading && (
