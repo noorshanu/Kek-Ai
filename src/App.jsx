@@ -1,39 +1,32 @@
-import Navbar from "components/Navbar";
-import Ecosystem from "section/Ecosystem";
-import Footer from "section/Footer";
-import Hero from "section/Hero";
-import Partners from "section/Partners";
-import Roadmap from "section/Roadmap";
-import Tokenomics from "section/Tokenomics";
+import HomePage from "pages/HomePage";
+import { useEffect, useState } from "react";
+import "./index.css";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
+        {/* <img src="images/loader.gif" alt="" /> */}
+        <img
+          src="images/loader.gif"
+          className="max-w-[20rem] w-[90%] pointer-events-none select-none relative bottom-10"
+          alt="loader"
+        />
+      </div>
+    );
+  }
+
   return (
-    <div id="home">
-      <div className="mb-4 sm:mb-6 lg:mb-10">
-        <Navbar />
-      </div>
-
-      <div className="mb-28 lg:mb-40">
-        <Hero />
-      </div>
-
-      <div className="mb-28 lg:mb-40">
-        <Ecosystem />
-      </div>
-
-      <div className="mb-28 lg:mb-48">
-        <Roadmap />
-      </div>
-
-      <div className="mb-28 lg:mb-40">
-        <Tokenomics />
-      </div>
-
-      <div className="mb-20 lg:mb-28">
-        <Partners />
-      </div>
-
-      <Footer />
+    <div>
+      <HomePage />
     </div>
   );
 }
