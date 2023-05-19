@@ -6,6 +6,7 @@ import { useState } from "react";
 import useDelayUnmount from "hooks/useDelayUnmount";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import { Link as ScrollLink } from "react-scroll";
+import {  FaTelegramPlane } from "react-icons/fa";
 
 function Navbar() {
   const isAbove1024px = useMediaQuery("(min-width : 1024px)");
@@ -75,7 +76,8 @@ function Navbar() {
             {!isAbove1024px && (
               <div className="flex items-center justify-between lg:hidden mb-6">
                 <div>
-                  <Logo />
+                  <a href="/"> <Logo /></a>
+                 
                 </div>
 
                 <button className="flex text-2xl" onClick={toggleSidebar}>
@@ -122,7 +124,7 @@ function Navbar() {
             )}
 
             <div className="text-[80%] xl:text-[100%] mt-6 lg:mt-0">
-              <Button className="w-full lg:w-auto">VIEW BETA DAPP</Button>
+              <Button href='https://t.me/kekaibsc' className="w-full lg:w-auto flex justify-center gap-3 items-center">Telegram   <FaTelegramPlane className="text-[1em] text-black" /></Button>
             </div>
           </div>
 

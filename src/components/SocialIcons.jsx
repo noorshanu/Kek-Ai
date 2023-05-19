@@ -1,36 +1,37 @@
-import { SiGitbook } from "react-icons/si";
+// import { SiGitbook } from "react-icons/si";
 import { BsMedium } from "react-icons/bs";
 import { FaReddit, FaTelegramPlane, FaTwitter } from "react-icons/fa";
+import {AiFillInstagram} from 'react-icons/ai'
 
 function SocialIcons() {
   return (
     <>
       <a
-        href="/"
+        href="https://instagram.com/kekaibsc" target="_blank"  rel="noreferrer"
         className="transition-all duration-100 text-[1em] text-primary hover:text-white"
       >
-        <SiGitbook />
+        <AiFillInstagram />
       </a>
       <a
-        href="/"
+        href="https://www.reddit.com/r/kekai/" target="_blank"  rel="noreferrer"
         className="transition-all duration-100 text-[1em] text-primary hover:text-white"
       >
         <FaReddit />
       </a>
       <a
-        href="/"
+        href="https://t.me/kekaiann" target="_blank"  rel="noreferrer"
         className="transition-all duration-100 text-[1em] text-primary hover:text-white"
       >
         <FaTelegramPlane />
       </a>
       <a
-        href="/"
+        href="https://twitter.com/kekaibsc" target="_blank"  rel="noreferrer"
         className="transition-all duration-100 text-[1em] text-primary hover:text-white"
       >
         <FaTwitter />
       </a>
       <a
-        href="/"
+        href="http://kekaibsc.medium.com/" target="_blank"  rel="noreferrer"
         className="transition-all duration-100 text-[1em] text-primary hover:text-white"
       >
         <BsMedium />

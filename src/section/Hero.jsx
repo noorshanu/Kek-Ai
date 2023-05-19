@@ -66,8 +66,8 @@ function Hero() {
         </p>
 
         <div className="grid grid-cols-[130px_130px] xl:grid-cols-[164.84px_164.84px] items-center justify-center gap-6 text-[80%] xl:text-[100%]">
-          <Button>Join Community</Button>
-          <Button variant={1}>BUY NOW</Button>
+          <Button href='https://kekai.gitbook.io/docs/'>Whitepaper</Button>
+          <Button variant={1} className='flex justify-center gap-1'>BUY NOW <img src="images/pink.png" className="h-[20px]"/></Button>
         </div>
 
         <div className="flex items-center justify-center mt-8 sm:mt-10 space-x-[.8em] text-[140%] xl:text-[160%]">
