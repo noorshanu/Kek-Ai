@@ -10,7 +10,7 @@ function Button({ children, px = 20, py = 8, className , href}) {
       href={href}
       target="_blank"
       rel="noreferrer" 
-      className={`group font-semibold relative text-secondary text-[1em] z-10 rounded-md transition-all duration-200 hover:-translate-y-[2px] ${className}`}
+      className={`group text-center font-semibold relative text-secondary text-[1em] z-10 rounded-md transition-all duration-200 hover:-translate-y-[2px] ${className}`}
     >
       {children}
 

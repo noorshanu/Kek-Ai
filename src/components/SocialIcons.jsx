@@ -19,7 +19,7 @@ function SocialIcons() {
         <FaReddit />
       </a>
       <a
-        href="https://t.me/kekaiann" target="_blank"  rel="noreferrer"
+        href="https://t.me/kekaibsc" target="_blank"  rel="noreferrer"
         className="transition-all duration-100 text-[1em] text-primary hover:text-white"
       >
         <FaTelegramPlane />
