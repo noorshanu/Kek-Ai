@@ -62,6 +62,7 @@ function Navbar() {
               >
                 ROADMAP
               </ScrollLink>
+              <a href="https://bscscan.com/address/0xEDddaD89d602Dfc22d90a9EeE81Fe72Dadf9faac" target="_blank" rel="noreferrer">Contract</a>
             </div>
           )}
 
