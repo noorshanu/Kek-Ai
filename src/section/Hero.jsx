@@ -66,7 +66,7 @@ function Hero() {
         </p>
 
         <div className="grid grid-cols-[130px_130px] xl:grid-cols-[164.84px_164.84px_164.84px_164.84px] items-center justify-center gap-6 text-[80%] xl:text-[100%]">
-        <Button variant={1} className='flex justify-center gap-1'>BUY NOW <img src="images/pcake.svg" className="h-[20px]"/></Button>
+        <Button variant={1} className='flex justify-center gap-1' href='https://pancakeswap.finance/swap?outputCurrency=0xEDddaD89d602Dfc22d90a9EeE81Fe72Dadf9faac'  target="_blank" rel="noreferrer">BUY NOW <img src="images/pcake.svg" className="h-[20px]"/></Button>
          
           <Button href="https://bscscan.com/address/0xEDddaD89d602Dfc22d90a9EeE81Fe72Dadf9faac" target="_blank" rel="noreferrer">Contract</Button>
           <Button href='https://kekai.gitbook.io/docs/'>Whitepaper</Button>
