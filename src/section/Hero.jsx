@@ -2,10 +2,13 @@ import Button from "components/Button";
 import SocialIcons from "components/SocialIcons";
 import useIntersectionObserver from "hooks/useIntersectionObserver";
 import { useEffect, useRef } from "react";
-
+// import {CopyToClipboard} from 'react-copy-to-clipboard';
+// import { useCallback,useState } from "react";
 function Hero() {
   const videoRef = useRef();
   const isScrolled = useIntersectionObserver(videoRef, { threshold: 0.5 });
+
+
 
   // useEffect(() => {
   //   if (isScrolled) {
@@ -67,8 +70,9 @@ function Hero() {
 
         <div className="grid grid-cols-[130px_130px] xl:grid-cols-[164.84px_164.84px_164.84px_164.84px] items-center justify-center gap-6 text-[80%] xl:text-[100%]">
         <Button variant={1} className='flex justify-center gap-1' href='https://pancakeswap.finance/swap?outputCurrency=0xEDddaD89d602Dfc22d90a9EeE81Fe72Dadf9faac'  target="_blank" rel="noreferrer">BUY NOW <img src="images/pcake.svg" className="h-[20px]"/></Button>
-         
-          <Button href="https://bscscan.com/address/0xEDddaD89d602Dfc22d90a9EeE81Fe72Dadf9faac" target="_blank" rel="noreferrer">Contract</Button>
+        {/* <CopyToClipboard onClick={onCopy} text={value}> */}
+          <Button className='cursor-pointer' >Contract </Button>
+         {/* </CopyToClipboard> */}
           <Button href='https://kekai.gitbook.io/docs/'>Whitepaper</Button>
           <Button href='https://www.dexview.com/bsc/0xEDddaD89d602Dfc22d90a9EeE81Fe72Dadf9faac'target="_blank" rel="noreferrer">Chart</Button>
         </div>
